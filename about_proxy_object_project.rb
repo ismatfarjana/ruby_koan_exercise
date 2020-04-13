@@ -17,7 +17,9 @@ class Proxy
     @object = target_object
     # ADD MORE CODE HERE
   end
-
+  def channel
+    10
+  end
   # WRITE CODE HERE
 end
 
@@ -47,7 +49,7 @@ class AboutProxyObjectProject < Neo::Koan
     tv = Proxy.new(Television.new)
 
     tv.power
-    tv.channel = 10
+    tv.channel= 10
 
     assert_equal [:power, :channel=], tv.messages
   end
